@@ -1,4 +1,4 @@
-package com.jwplayer.drmdemo;
+package com.skh.jwplayerdemo;
 
 import android.annotation.TargetApi;
 import android.os.Parcel;

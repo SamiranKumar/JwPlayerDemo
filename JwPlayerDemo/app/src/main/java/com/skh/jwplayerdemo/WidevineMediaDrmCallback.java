@@ -1,10 +1,8 @@
-package com.jwplayer.drmdemo;
+package com.skh.jwplayerdemo;
 
 import android.annotation.TargetApi;
 import android.os.Parcel;
-
 import android.text.TextUtils;
-
 
 import com.google.android.exoplayer2.drm.ExoMediaDrm;
 import com.jwplayer.pub.api.media.drm.MediaDrmCallback;
@@ -23,6 +21,10 @@ public class WidevineMediaDrmCallback implements MediaDrmCallback {
     public WidevineMediaDrmCallback(String contentId, String provider) {
         String params = "?video_id=" + contentId + "&provider=" + provider;
         defaultUri = WIDEVINE_GTS_DEFAULT_BASE_URI + params;
+    }
+
+    public WidevineMediaDrmCallback(String auth) {
+        defaultUri = auth;
     }
 
     protected WidevineMediaDrmCallback(Parcel in) {
